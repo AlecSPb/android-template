@@ -4,19 +4,19 @@ import android.content.Context
 import androidx.datastore.createDataStore
 import androidx.datastore.preferences.createDataStore
 import com.skyyo.template.application.network.calls.AuthCalls
-import com.skyyo.template.application.repositories.auth.AuthRepository
 import com.skyyo.template.application.persistance.DataStoreManager
 import com.skyyo.template.application.persistance.PaymentMethodsProtoStoreManager
+import com.skyyo.template.application.repositories.auth.AuthRepository
 import com.skyyo.template.protobuff.PaymentMethodsSerializer
 import com.skyyo.template.utils.eventDispatchers.UnauthorizedEventDispatcher
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 @Module
 object AppModule {
 
